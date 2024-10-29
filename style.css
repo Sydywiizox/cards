@@ -11,7 +11,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 50px auto;
 }
 
 body::before {
@@ -33,6 +32,7 @@ body.darkened::before {
 }
 
 .container {
+    margin: 50px;
     display: flex;
     gap: 30px;
     flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
