@@ -1,0 +1,83 @@
+*,::before,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("snk.jpg");
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    overflow-y: auto;
+    margin: 50px auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    background: url("snk.jpg") no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.8);
+    z-index: -1;
+    transition: all 0.3s ease-out;
+}
+
+body.darkened::before {
+    filter: brightness(0.5); /* Appliquer un filtre plus sombre */
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+    justify-content: center; /* Centre les cartes sur chaque ligne */
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card:hover {
+    z-index: 10;
+}
+
+.content-card {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: all 0.15s ease-out;
+    background-color: black;
+    filter: brightness(0.8) drop-shadow(0 25px 15px);
+}
+
+.content-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    transition: all 0.15s ease-out;
+    border-radius: 25px;
+    mix-blend-mode: hard-light;
+    background: radial-gradient(circle at 50% 50%, rgb(184, 196, 211), transparent);
+    pointer-events: none; 
+}
