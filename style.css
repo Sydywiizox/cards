@@ -39,10 +39,10 @@ body.darkened::before {
 }
 
 .card {
-    flex: 1 2 450px; /* Reglage pour largeur dynamique, enlever pour largeur statique */
+    flex: 1 2 250px; /* Reglage pour largeur dynamique, enlever pour largeur statique */
     width: 350px;
-    height: 800px;
-    max-width: 800px;
+    height: 400px;
+    max-width: 250px;
     perspective: 1000px;
     position: relative;
 }
