@@ -3,7 +3,13 @@ const body = document.querySelector("body")
 
 card.forEach(el => {
     el.addEventListener("mousemove", e => {
-        body.classList.add("darkened");
+        // Vérifier l'opacité de la carte avant d'ajouter la classe "darkened"
+        const cardOpacity = window.getComputedStyle(el).opacity;
+
+        // N'ajouter la classe "darkened" que si la carte n'est pas en animation (opacité de 1)
+        if (cardOpacity >= 0.2) {
+            body.classList.add("darkened");
+        }
 
         let x = e.offsetX;
         let y = e.offsetY;
