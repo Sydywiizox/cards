@@ -14,7 +14,7 @@ gsap.from(".card", {
 });
 
 gsap.from(".titan", {
-    left: "100vw",
+    left: "120vw",
     top: "200px",
     start: "top 50%", // when the top of the trigger hits the top of the viewport
     end: "bottom 50%",
