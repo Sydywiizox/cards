@@ -5,7 +5,6 @@
 }
 
 body {
-    background: url("snk.jpg");
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -40,9 +39,10 @@ body.darkened::before {
 }
 
 .card {
-    flex: 1 2 300px; /* Reglage pour largeur dynamique, enlever pour largeur statique */
+    flex: 1 2 450px; /* Reglage pour largeur dynamique, enlever pour largeur statique */
     width: 350px;
-    height: 500px;
+    height: 800px;
+    max-width: 800px;
     perspective: 1000px;
     position: relative;
 }
