@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".card", {
-  y: "10vh",
+  y: "20vh",
   opacity: 0,
   stagger: 0.1,
   scrollTrigger: {
@@ -12,6 +12,21 @@ gsap.from(".card", {
     markers: false,
   },
 });
+
+gsap.from(".titan", {
+    left: "100vw",
+    top: "200px",
+    start: "top 50%", // when the top of the trigger hits the top of the viewport
+    end: "bottom 50%",
+    scrollTrigger: {
+      trigger: ".titan-c",
+      start: "10% 60%", // when the top of the trigger hits the top of the viewport
+    end: "150% 60%",
+      scrub: true,
+      markers: false,
+    },
+  }
+);
 
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis();

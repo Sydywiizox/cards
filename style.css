@@ -47,6 +47,19 @@ body.darkened::before {
     position: relative;
 }
 
+.titan-c {
+    position: absolute;
+    top: 1100px;
+    left: -400px;
+    height: 500px;
+    aspect-ratio: 1;
+    z-index: 0;
+}
+
+.titan img {
+    height: 100%;
+}
+
 .card:hover {
     z-index: 10;
 }
