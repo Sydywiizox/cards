@@ -7,7 +7,7 @@ card.forEach(el => {
         const cardOpacity = window.getComputedStyle(el).opacity;
 
         // N'ajouter la classe "darkened" que si la carte n'est pas en animation (opacité de 1)
-        if (cardOpacity >= 0.2) {
+        if (cardOpacity >= 0.3) {
             body.classList.add("darkened");
         }
 
